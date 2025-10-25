@@ -15,6 +15,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
 
     // ReadonlyURLSearchParams → 変更可能にコピー
     const params = new URLSearchParams(searchParams as any);
+    params.set('page', '1');
 
     if (term) {
       params.set('query', term);
